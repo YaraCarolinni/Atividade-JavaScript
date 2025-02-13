@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Square</title>
+    <style>
+        #square {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="square"></div>
+    <script>
+        let square = document.getElementById('square');
+        let position = 0;
+        let direction = 1;
+
+        function moveSquare() {
+            position += direction;
+            square.style.left = position + 'px';
+
+            if (position >= window.innerWidth - square.offsetWidth || position <= 0) {
+                direction *= -1;
+            }
+        }
+
+        setInterval(moveSquare, 10);
+    </script>
+</body>
+</html>

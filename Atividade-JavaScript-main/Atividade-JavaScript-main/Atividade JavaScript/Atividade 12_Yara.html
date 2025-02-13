@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #counter {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+
+    <script>
+        let count = 0;
+        document.body.addEventListener('click', function() {
+            count++;
+            document.getElementById('counter').textContent = count;
+        });
+    </script>
+</body>
+</html>
